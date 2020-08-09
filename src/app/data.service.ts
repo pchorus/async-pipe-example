@@ -10,7 +10,7 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class DataService {
 
-  private people$ = this.http.get<SwapiResults<StarWarsPerson>>('https://swapi.co/api/people/').pipe(
+  private people$ = this.http.get<SwapiResults<StarWarsPerson>>('https://swapi.dev/api/people/').pipe(
     map(data => data.results),
     shareReplay()
   );
@@ -18,7 +18,7 @@ export class DataService {
   constructor(private http: HttpClient) {}
 
   loadFilms() {
-    return this.http.get<SwapiResults<StarWarsFilm>>('https://swapi.co/api/films/').pipe(
+    return this.http.get<SwapiResults<StarWarsFilm>>('https://swapi.dev/api/films/').pipe(
       map(data => data.results)
     );
   }
