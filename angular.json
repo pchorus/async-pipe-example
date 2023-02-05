@@ -96,24 +96,11 @@
               "src/assets"
             ]
           }
-        }
-      }
-    },
-    "async-pipe-example-e2e": {
-      "root": "e2e/",
-      "projectType": "application",
-      "prefix": "",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "async-pipe-example:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "async-pipe-example:serve:production"
-            }
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         }
       }

@@ -12,7 +12,7 @@ export class DataService {
 
   private people$ = this.http.get<SwapiResults<StarWarsPerson>>('https://swapi.dev/api/people/').pipe(
     map(data => data.results),
-    shareReplay()
+    shareReplay({ bufferSize: 1, refCount: false })
   );
 
   constructor(private http: HttpClient) {}
