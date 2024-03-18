@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "async-pipe-example:build"
+            "buildTarget": "async-pipe-example:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "async-pipe-example:build:production"
+              "buildTarget": "async-pipe-example:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "async-pipe-example:build"
+            "buildTarget": "async-pipe-example:build"
           }
         },
         "test": {
